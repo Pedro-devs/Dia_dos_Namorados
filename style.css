@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+h1{
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+img{
+    width: 300px;
+    max-width: 90%;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    margin-bottom: 20px;
+}
+
+p{
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+button{
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: #ff007f;
+    transform: scale(1.1);
+}
+
+#resultado{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Corações */
+body::before,
+body::after{
+    content: "❤️ ❤️ 💖 💕 ❤️ 💖 💕";
+    position: fixed;
+    font-size: 30px;
+    opacity: 0.4;
+    animation: flutuar 8s linear infinite;
+}
+
+body::before{
+    left: -100px;
+    top: 20%;
+}
+
+body::after{
+    right: -100px;
+    top: 60%;
+    animation-duration: 10s;
+}
+
+@keyframes flutuar{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(120vw);
+    }
+}
+
+
+/* Responsividade para celulares */
+@media (max-width: 768px){
+
+    body{
+        padding: 15px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    img{
+        width: 90%;
+        max-width: 350px;
+    }
+
+    p{
+        font-size: 1rem;
+        padding: 15px;
+        line-height: 1.6;
+    }
+
+    button{
+        width: 90%;
+        max-width: 300px;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #resultado{
+        font-size: 1rem;
+    }
+}
+
+/* Celulares menores */
+@media (max-width: 480px){
+
+    h1{
+        font-size: 1.7rem;
+    }
+
+    p{
+        font-size: 0.95rem;
+    }
+
+    img{
+        border-width: 3px;
+    }
+
+    button{
+        font-size: 0.9rem;
+    }
+}
